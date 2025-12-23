@@ -1,0 +1,4 @@
+.runtime {
+  font-weight: bold;
+  color: var(--theme-link); /* 或 #7F84A7 */
+}
