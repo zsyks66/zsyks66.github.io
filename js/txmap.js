@@ -209,7 +209,7 @@
             //自定义文本和需要放的位置
             var welcomeElement = document.getElementById("welcome-info");
             if (welcomeElement) {
-                welcomeElement.innerHTML = `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span style="color:var(--theme-color)">${pos}</span> 的小伙伴，${timeChange}您现在距离站长约 <span style="color:var(--theme-color)">${dist}</span> 公里，当前的IP地址为： <span style="color:var(--theme-color)">${ip}</span>， ${posdesc}</b>`;
+                welcomeElement.innerHTML = `<center style="font-weight:bold">🎉 欢迎欢迎 🎉</center>&emsp;&emsp;欢迎来自 <span style="color:var(--theme-color); font-weight:bold">${pos}</span> 的小伙伴，${timeChange}您现在距离站长约 <span style="color:var(--theme-color); font-weight:bold">${dist}</span> 公里，当前的IP地址为： <span style="color:var(--theme-color); font-weight:bold">${ip}</span>， ${posdesc}`;
             }
         } catch (err) {
             console.error("Error in showWelcome:", err);
@@ -246,7 +246,7 @@
                 console.error("Location API failed", err);
                 var welcomeElement = document.getElementById("welcome-info");
                 if (welcomeElement) {
-                    welcomeElement.innerHTML = "无法获取位置信息，请检查网络或 API Key。";
+                    welcomeElement.innerHTML = "无法获取位置信息。";
                 }
             }
         });
